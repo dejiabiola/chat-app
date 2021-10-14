@@ -1,0 +1,169 @@
+/* body {
+  height: 100vh;
+} */
+
+
+.messages__history {
+  overflow-y: scroll;
+  max-height: calc(100vh - 8rem);
+  /* outline: 1px solid red */
+}
+
+
+ /* Style the side navigation */
+ .sidenav {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(62, 5, 77);
+  overflow-x: hidden;
+  transform: translateX(0);
+  transition: transform 0.3 ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidenav .navbar-brand:hover {
+  background: none;
+}
+
+  /*make the active user text inherit style from container*/
+
+  .inbox__people{
+    color: white;
+    padding: 16px;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+p {
+  max-width: 100%;
+}
+
+
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.main {
+  margin-left: 200px;
+  padding-left: 20px;
+  position: relative;
+  height: 100vh;
+}
+
+
+.message_form {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  height: 3rem;
+  backdrop-filter: blur(10px);
+  background: rgba(95, 27, 112, 0.3);
+  padding: 0.25rem;
+}
+
+.message_form #typing {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  z-index: 10;
+  color: rgb(62, 5, 77);
+}
+
+.message_form .message_form__input {
+  flex-grow: 5;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 2rem; 
+  margin: 0.25rem;
+}
+
+.message_form .message_form__input:focus { 
+  outline: none; 
+}
+
+form > button { 
+  background: rgb(62, 5, 77); 
+  border: none; 
+  padding: 0 1rem; 
+  margin: 0.25rem; 
+  border-radius: 3px; 
+  outline: none; 
+  color: #fff; 
+}
+
+.outgoing__message {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+}
+
+.outgoing__message .sent__message {
+  margin-right: 1rem;
+  border-radius: 10px;
+  min-width: 150px;
+  max-width: 350px;
+  padding: 10px;
+  background-color: rgb(236, 118, 118);
+  word-wrap: break-word;
+}
+
+.incoming__message {
+  background: lightblue;
+  width: 150px;
+  max-width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.incoming__message .message__info {
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.incoming__message .message__info .message__author {
+  margin-right: 10px;
+}
+
+
+.outgoing__message .message__info {
+  display: flex;
+  justify-content: end;
+}
+
+.outgoing__message .time_date {
+  font-size: 10px;
+}
+
+
+@media screen and (max-width: 450px) {
+  .sidenav {
+    transform: translateX(-200px);
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}

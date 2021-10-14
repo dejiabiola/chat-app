@@ -1,0 +1,42 @@
+/* All styling on this page overrides index.html bootstrap styling only */
+
+
+body {
+  background-color: #FFE57D;
+}
+
+.main {
+  height: calc(100vh - 10rem)
+}
+
+
+/* Override font size and color of h1 element */
+h1 {
+  font-size: 70px;
+  color: rgba(48, 44, 44, 0.9);
+}
+
+/* override styling for p tag */
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2 {
+  word-spacing: 8px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,23 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+h2 {
+  font-family: 'Inter' sans-serif;
+  font-weight: 500;
+}
+
+p, ol, table {
+  font-family: 'Poppins', sans-serif;
+  line-height: 25px;
+}
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+
