@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+    <header class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img src="./images/stark.png" alt="website logo" height=80px width=80px>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-md-auto mb-2 mb-lg-0">
+              <li class="nav-item me-md-5">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item me-md-5">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="chat.html">Chat</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <main class="container mt-4">
+      <h1 class="text-center mb-3 mt-5">Project Information</h1>
+      
+      <section class="project-info-body mb-5">
+        <p class="mb-3">
+          This project is to showcase how I can use my knowledge of HTML, CSS and JavaScript to build
+          a web pages. I also used Nodejs and SocketIO to build a chat application that allows multiple users
+          send messages across to each other.
+        </p>
+        <p class="mb-3">
+          The home page and about pages are simple HTML and CSS templates to convey information in a Semantic
+          manner to users of the application. I imported fonts from Google Fonts for the font family of texts in the 
+          website. I also used a mix of bootstrap styling and my own custom styling to style the pages.
+        </p>
+        <p class="mb-3">
+          The chat page is a lot more complex and utilizes a lot of JavaScript code to ensure it's functionality. 
+          Since, some boiler plate code which already handled the chat communication was provided, I focused on styling
+          the chat page in a more presentable manner similar to how a standard chat application like Whatsapp would look like.
+          I also extended certain JavaScript functionalities. These are:
+        </p>
+        <ol>
+          <li class="mb-2">Using bootstrap toast notification components, I created a way for users on the chat page to be notified
+            when someone joins or leaves the application. A toast notification displays this information for about 3 seconds
+            before fading away.
+          </li>
+          <li>
+            I added code to track users keyboard presses in order to figure out when they are typing a message in the input box 
+            then I displayed a text just above the input field so other users are notified that a certain user is typing.
+          </li>
+        </ol>
+      </section>
+      
+
+      <section class="mb-5 mt-5">
+        <h2 class="text-center mb-3 mt-4 pt-4">Technologies Used</h2>
+        <p class="mb-3">The technologies used for this project are detailed in the table below</p>
+        <table>
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Technology</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>HTML</td>
+              <td>
+                HTML is used to define the meaning and strucure of web content.
+                Semantic HTML was used across to website to ensure optimal acessibility and code readability.
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>CSS</td>
+              <td>
+                Cascading Style Sheets is used to describe the presentation of the website.
+                It was used on this project to describe how elements should be rendered on the screen.
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>JavaScript</td>
+              <td>
+                JavaScript is an interpreted programming language that is to provide interactivity in 
+                web pages. It is also used in non browser environments such as Node.js to build server side 
+                applications. JavaScript is used extensively across this application especially for the chat 
+                page as it is the programming language in which the socket library is written in.
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Bootstrap</td>
+              <td>
+                Bootstrap is a UI components and untilies library that helps developers rapidy build
+                responsive mobile first websites. It is used in this applications to ensure mobile responsiveness,
+                for the navigation bar across the HTML pages and also for margin and padding setting on different
+                elements across the website.
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Nodejs</td>
+              <td>
+                Nodejs is a JavaScript runtime built on Chrome's V8 JavaScript engine. It basically allows
+                developers write and compile JavaScript code in a non browser environment, therefore allowing
+                JavaScript to be used for building server side applications.
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>ExpressJs</td>
+              <!-- Definition gotten from https://expressjs.com/ -->
+              <td>
+                Express is a fast, unopinionated minimalist web framework for Nodejs. Due to the complexity of writing
+                plain Nodejs code, express was leveraged to write the server code in an easier and faster way. 
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Socketio</td>
+              <!-- Definition gotten from https://expressjs.com/ -->
+              <td>
+                Socket.IO is a reliable, performant and scalable bidirectional communication linrary. 
+                It is used on this project to power the functionality of the chat application. 
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="bg-black">
+      <section class="container p-3">
+        <p class="text-center text-white mb-0">Project created by Adedeji 🚀</p>
+      </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+</body>
+</html>      

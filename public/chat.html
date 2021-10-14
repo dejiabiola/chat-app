@@ -3,21 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Socket.io simple chat</title>
+    <title>Socket.io simple chat Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/demo.css" />
+    <link rel="stylesheet" href="/css/chat.css">
   </head>
   <body>
-    <div class="sidenav">
-        <div class="inbox__people">
-            <h4>Active users</h4>
-          </div>
-
+    <aside class="sidenav">
+       <a class="navbar-brand p-0" href="index.html">
+              <img src="./images/stark.png" alt="website logo" height=80px width=80px>
+      </a>
+      <div class="inbox__people">
+        <h4>Online Users</h4>
       </div>
-      
-      
-      <br>
-      <hr>
-      <div class="content">
+    </aside>
+    <main class="main">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- <a class="navbar-brand" href="index.html">
+              <img src="./images/stark.png" alt="website logo" height=80px width=80px>
+            </a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-md-auto mb-2 mb-lg-0">
+                <li class="nav-item me-md-5">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item me-md-5">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link active" href="chat.html">Chat</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+            
+        </nav>
+      </header>
+      <section class="content">
+        <hr class="mt-0">
         <div class="messages__history"></div>
           <div class="fallback"></div>
         <div class="inbox__messages">
@@ -26,13 +54,31 @@
         </div>
 
         <form class="message_form">
-            <input type="text" class="message_form__input" placeholder="Type a message" />
+            <p id="typing"></p>  
+            <input type="text" class="message_form__input" autocomplete="off" placeholder="Type a message" />
             <button class="message_form__button" type="submit">
               Enter
             </button>
           </form>
-      </div>
+      </section>
 
+      <div class="toast position-absolute top-0 start-50 translate-middle-x" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <strong class="me-auto">Notification</strong>
+          <small>Now</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          
+        </div>
+      </div>
+    </main>
+
+      
+    
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
   </body>
