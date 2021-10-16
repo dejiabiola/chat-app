@@ -1,13 +1,8 @@
-/* body {
-  height: 100vh;
-} */
+/* Styling for chat page */
+/* All syles defined here modify chat page elements only */
 
 
-.messages__history {
-  overflow-y: scroll;
-  max-height: calc(100vh - 8rem);
-  /* outline: 1px solid red */
-}
+
 
 
  /* Style the side navigation */
@@ -31,14 +26,6 @@
   background: none;
 }
 
-  /*make the active user text inherit style from container*/
-
-  .inbox__people{
-    color: white;
-    padding: 16px;
-}
-
-
 /* Side navigation links */
 .sidenav a {
   color: white;
@@ -51,6 +38,11 @@ p {
   max-width: 100%;
 }
 
+/*make the active user text inherit style from container*/
+.inbox__people{
+  color: white;
+  padding: 16px;
+}
 
 
 /* Change color on hover */
@@ -58,6 +50,8 @@ p {
   background-color: #ddd;
   color: black;
 }
+
+
 
 /* Style the content */
 .main {
@@ -68,6 +62,7 @@ p {
 }
 
 
+/* Message form styling */
 .message_form {
   position: absolute;
   bottom: 0;
@@ -111,6 +106,8 @@ form > button {
   color: #fff; 
 }
 
+
+/* Custom styling for incoming and outgoing messages */
 .outgoing__message {
   display: flex;
   margin-bottom: 20px;
@@ -157,7 +154,14 @@ form > button {
   font-size: 10px;
 }
 
+.messages__history {
+  overflow-y: scroll;
+  max-height: calc(100vh - 8rem);
+}
 
+
+
+/* Hide sidebar and make chat screen take up full width on mobile devices */
 @media screen and (max-width: 450px) {
   .sidenav {
     transform: translateX(-200px);
