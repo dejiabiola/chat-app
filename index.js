@@ -38,10 +38,6 @@ io.on("connection", function (socket) {
   });
 
   socket.on('typing', (data)=>{
-    if(data.typing===true) {
-       io.emit('typing', data)
-    }else {
       io.emit('typing', data)
-    }
   })
 });

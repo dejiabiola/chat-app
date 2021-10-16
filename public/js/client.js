@@ -33,19 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
-messageForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (!inputField.value) {
-    return;
+// Socket typing listener to present user is typing data on screen
+socket.on('typing', function (data) {
+  if (data.typing == true) {
+    isTypingContainer.textContent = `${data.user} is typing...`;
+  } else {
+    isTypingContainer.textContent = "";
   }
+})
 
-  socket.emit("chat message", {
-    message: inputField.value,
-    nick: userName,
-  });
-
-  inputField.value = "";
-});
 
 
 const typingTimeout = () => {
@@ -137,12 +133,19 @@ socket.on("user disconnected", function (userName) {
   document.querySelector(`.${userName}-userlist`).remove();
 });
 
-// Socket typing listener to present user is typing data on screen
-socket.on('typing', function (data) {
-  if (data.typing == true) {
-    isTypingContainer.textContent = `${data.user} is typing...`;
-  } else {
-    isTypingContainer.textContent = "";
+messageForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!inputField.value) {
+    return;
   }
-})
+
+  socket.emit("chat message", {
+    message: inputField.value,
+    nick: userName,
+  });
+
+  inputField.value = "";
+});
+
+
 
