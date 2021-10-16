@@ -10,7 +10,7 @@ You must have nodejs and and npm installed on your device in order to run this a
 
 ### Installation
 Clone the repo from github to your local machine using
-```git clone ```
+```git clone https://github.com/dejiabiola/chat-app.git```
 
 In your working folder root, run the following command
 ```npm install```

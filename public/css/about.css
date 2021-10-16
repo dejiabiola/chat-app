@@ -1,5 +1,9 @@
 /* Styling for about page */
 /* All syles defined here modify about page elements only */
+body {
+  background-color: #FFE57D;
+}
+
 
 h2 {
   font-family: 'Inter' sans-serif;
@@ -11,12 +15,18 @@ p, ol, table {
   line-height: 25px;
 }
 
+/* Code gotten from https://stackoverflow.com/questions/31418826/table-with-gradient-borders-and-cell-gradient-borders */
 table {
   width: 100%;
+  background-image: linear-gradient(to bottom, red 0%, blue 100%);
+  background-origin: border-box;
+  border-spacing: 5px;
+  border: 5px solid transparent;
 }
 
 td, th {
   padding: 10px;
-  border: 1px solid #dddddd;
+  background-color: #FFE57D;
+  border: 1px solid #aa2b2b;
 }
 
